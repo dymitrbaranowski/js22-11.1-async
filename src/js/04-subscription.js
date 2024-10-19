@@ -1,5 +1,6 @@
 import '../sass/_common.scss';
 import BSN from 'bootstrap.native';
+var BSN = require('bootstrap.native');
 
 const refs = {
   modal: document.querySelector('#subscription-modal'),
