@@ -12,8 +12,20 @@ import '../sass/_example.scss';
 
 // console.log('После вызова setTimeout');
 
-const logger = time => {
-  console.log(`Лог через ${time}ms, потому что не отменили таймаут`);
-};
+const logger = time => console.log(`Лог каждые ${time}ms -${Date.now()}`);
 
-setTimeout(logger, 2000, 2000);
+// console.log('До вызова setInterval');
+// setInterval(logger, 2000, 2000);
+// console.log('после вызова setInterval');
+
+const intervalId = setInterval(logger, 2000, 2000);
+
+// const timerId = setTimeout(logger, 2000, 2000);
+// console.log(timerId);
+
+const shouldCancelTimer = Math.random() > 0.3;
+console.log(shouldCancelTimer);
+
+if (shouldCancelTimer) {
+  clearInterval(intervalId);
+}
