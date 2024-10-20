@@ -1,8 +1,8 @@
 import '../sass/_common.scss';
 
 const refs = {
-  startBtn: document.querySelector('button[data-action-start]'),
-  stopBtn: document.querySelector('button[data-action-stop]'),
+  startBtn: document.querySelector('button[data-action-start'),
+  stopBtn: document.querySelector('button[data-action-stop'),
   clockface: document.querySelector('.js-clockface'),
 };
 
@@ -44,12 +44,6 @@ class Timer {
     this.onTick(time);
   }
 
-  /*
-   * - Принимает время в миллисекундах
-   * - Высчитывает сколько в них вмещается часов/минут/секунд
-   * - Возвращает обьект со свойствами hours, mins, secs
-   * - Адская копипаста со стека 💩
-   */
   getTimeComponents(time) {
     const hours = this.pad(
       Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -60,9 +54,6 @@ class Timer {
     return { hours, mins, secs };
   }
 
-  /*
-   * Принимает число, приводит к строке и добавляет в начало 0 если число меньше 2-х знаков
-   */
   pad(value) {
     return String(value).padStart(2, '0');
   }
@@ -71,15 +62,13 @@ class Timer {
 const timer = new Timer({
   onTick: updateClockface,
 });
+// const timer = new Timer();
+// timer.start();
 
 refs.startBtn.addEventListener('click', timer.start.bind(timer));
+
 refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
 
-/*
- * - Принимает время в миллисекундах
- * - Высчитывает сколько в них вмещается часов/минут/секунд
- * - Рисует интерфейс
- */
 function updateClockface({ hours, mins, secs }) {
   refs.clockface.textContent = `${hours}:${mins}:${secs}`;
 }
