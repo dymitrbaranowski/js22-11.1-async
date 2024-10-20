@@ -1,0 +1,2 @@
+console.log(bootstrap);const o={myModal:document.querySelector("#myModal")};let e=0;var t=new bootstrap.Modal(document.getElementById("myModal"),{keyboard:!1});function l(){3!==e?setTimeout((()=>{console.log("Открываем надоедалку"),t.show(),e+=1}),3e3):console.log("Максимальное кол-во надоеданий")}l(),o.myModal.addEventListener("hide.bs.modal",(()=>{l()}));
+//# sourceMappingURL=04-subscription.2f638176.js.map
