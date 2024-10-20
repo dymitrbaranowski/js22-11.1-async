@@ -1,2 +1,0 @@
-!function(){console.log(bootstrap);var o={myModal:document.querySelector("#myModal")},e=0,n=new bootstrap.Modal(document.getElementById("myModal"),{keyboard:!1});function t(){3!==e?setTimeout((function(){console.log("Открываем надоедалку"),n.show(),e+=1}),3e3):console.log("Максимальное кол-во надоеданий")}t(),o.myModal.addEventListener("hide.bs.modal",(function(){t()}))}();
-//# sourceMappingURL=04-subscription.4f4d6e30.js.map

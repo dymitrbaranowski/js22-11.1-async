@@ -1,0 +1,2 @@
+!function(){console.log(bootstrap);var o={myModal:document.querySelector("#myModal"),subscribeBtn:document.querySelector("button[data-subscribe]")},e=0,t=!1,n=new bootstrap.Modal(document.getElementById("myModal"),{keyboard:!1});function d(){3===e||t?console.log("Максимальное кол-во надоеданий или подписался"):setTimeout((function(){console.log("Открываем надоедалку"),n.show(),e+=1}),1e3)}d(),o.myModal.addEventListener("hide.bs.modal",d),o.subscribeBtn.addEventListener("click",(function(){t=!0,n.hide()}))}();
+//# sourceMappingURL=04-subscription.b472bdad.js.map

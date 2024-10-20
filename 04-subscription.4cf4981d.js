@@ -1,0 +1,2 @@
+console.log(bootstrap);const e={myModal:document.querySelector("#myModal"),subscribeBtn:document.querySelector("button[data-subscribe]")};let o=0,t=!1;var n=new bootstrap.Modal(document.getElementById("myModal"),{keyboard:!1});function d(){3===o||t?console.log("Максимальное кол-во надоеданий или подписался"):setTimeout((()=>{console.log("Открываем надоедалку"),n.show(),o+=1}),1e3)}d(),e.myModal.addEventListener("hide.bs.modal",d),e.subscribeBtn.addEventListener("click",(function(){t=!0,n.hide()}));
+//# sourceMappingURL=04-subscription.4cf4981d.js.map
