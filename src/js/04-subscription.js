@@ -1,11 +1,11 @@
 import '../sass/_common.scss';
-import { Modal } from 'bootstrap';
 
+console.log(bootstrap);
 const refs = {
   myModal: document.querySelector('#myModal'),
 };
 
-const PROMPT_DELAY = 1000;
+const PROMPT_DELAY = 3000;
 const MAX_PROMPT_ATTEMPTS = 3;
 let promptCounter = 0;
 
